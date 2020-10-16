@@ -16,6 +16,7 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Oswald:wght@400;600;700&family=PT+Sans:wght@400;700&display=swap"
     rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
   <link rel="stylesheet" href="css/main.css">
 
   <meta name="theme-color" content="#fafafa">
@@ -57,7 +58,7 @@
   <div class="barra">
     <div class="contenedor clearfix">
       <div class="logo">
-        <img src="img/logo.png" alt="logo">
+        <a href="index.html"><img src="img/logo.png" alt="logo"></a>
       </div>
 
       <div class="menu-movil">
@@ -68,7 +69,7 @@
 
 
       <nav class="navegacion-principal">
-        <a href="#">Habitaciones</a>
+        <a href="habitaciones.html">Habitaciones</a>
         <a href="#">El Hotel</a>
         <a href="#">Consignas</a>
         <a href="reservas.html">Reservas</a>
@@ -108,7 +109,7 @@
               <p><i class="fas fa-calendar"></i>20/10</p>
               <p><i class="fas fa-user"></i>David Soriano</p>
             </div>
-            <div id="pisos" class="detalle-evento">
+            <div class="detalle-evento">
               <h3>LAVABO 412 TAPADO </h3>
               <p><i class="fas fa-clock"></i>22:00 hrs</p>
               <p><i class="fas fa-calendar"></i>20/10</p>
@@ -116,6 +117,37 @@
             </div>
             <a href="#" class="boton float-right">Ver todos</a>
           </div>
+          <div id="rece" class="info-entrada ocultar clearfix">
+            <div class="detalle-evento">
+              <h3>COMPRAR PAPEL DE FACTURA</h3>
+              <p><i class="fas fa-clock"></i>20:00 hrs</p>
+              <p><i class="fas fa-calendar"></i>20/10</p>
+              <p><i class="fas fa-user"></i>David Soriano</p>
+            </div>
+            <div class="detalle-evento">
+              <h3>SUBIR TOALLAS</h3>
+              <p><i class="fas fa-clock"></i>22:00 hrs</p>
+              <p><i class="fas fa-calendar"></i>20/10</p>
+              <p><i class="fas fa-user"></i>Clizia Catapano</p>
+            </div>
+            <a href="#" class="boton float-right">Ver todos</a>
+          </div>
+          <div id="rest" class="info-entrada ocultar clearfix">
+            <div class="detalle-evento">
+              <h3>COMPRAR FRUTA</h3>
+              <p><i class="fas fa-clock"></i>20:00 hrs</p>
+              <p><i class="fas fa-calendar"></i>20/10</p>
+              <p><i class="fas fa-user"></i>David Soriano</p>
+            </div>
+            <div class="detalle-evento">
+              <h3>LIMPIAR HORNO</h3>
+              <p><i class="fas fa-clock"></i>22:00 hrs</p>
+              <p><i class="fas fa-calendar"></i>20/10</p>
+              <p><i class="fas fa-user"></i>Clizia Catapano</p>
+            </div>
+            <a href="#" class="boton float-right">Ver todos</a>
+          </div>
+
           <!--consignas-->
         </div>
         <!--programa evento-->
@@ -127,7 +159,7 @@
   <!--programa-->
 
   <section class="habitaciones contenedor seccion">
-    <h2>Nuestras habitaciones</h2>
+    <h2 id="nuestras-habs">Nuestras habitaciones</h2>
     <ul class="lista-habitaciones clearfix">
       <li>
         <div class="habitacion">
@@ -172,16 +204,16 @@
     <div class="contenedor">
       <ul class="resumen-evento clearfix">
         <li>
-          <p class="numero">10</p>Equipo
+          <p class="numero"></p>Equipo
         </li>
         <li>
-          <p class="numero">15</p>Pisos
+          <p class="numero"></p>Pisos
         </li>
         <li>
-          <p class="numero">3</p>Recepción
+          <p class="numero"></p>Recepción
         </li>
         <li>
-          <p class="numero">9</p>Restauración
+          <p class="numero"></p>Restauración
         </li>
       </ul>
     </div>
@@ -346,6 +378,8 @@
 
   </script>
   <script src="js/plugins.js"></script>
+  <script src="js/jquery.animateNumber.min.js"></script>
+  <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
   <script src="js/main.js"></script>
 
   <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
