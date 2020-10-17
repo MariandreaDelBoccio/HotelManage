@@ -975,7 +975,7 @@
 
     /*Internas*/
 
-    .habitaciones .navegacion-principal .activo {
+    .navegacion-principal .activo {
       border-bottom: 2px solid #fe4918;
     }
 
@@ -1126,7 +1126,73 @@
       width: 150px;
     }
 
+    /* calendario */
 
+    .calendario h3 {
+      background-color: #fe4918;
+      clear: both;
+      color: #ffff;
+      text-align: center;
+      padding: 10px 0;
+    }
+
+    .calendario::after {
+      clear: both;
+      display: block;
+      content: '';
+    }
+
+    .dia {
+      width: 50%;
+      float: left;
+      border: 2px solid #e1e1e1;
+      transition: all .3s ease;
+    }
+
+    @media (min-width: 768px) {
+      .dia {
+        width: 33.3%;
+        min-height: 240px;
+        padding-top: 20px;
+      }
+    }
+
+    .dia:hover {
+      background-color: #e1e1e1;
+      -webkit-transform: scale(1.1);
+    }
+
+    .dia p.titulo {
+      color: #fe4918;
+      text-transform: uppercase;
+      font-weight: bold;
+    }
+
+    .dia p {
+      font-size: 1em;
+    }
+
+    .dia i {
+      color: #fe4918;
+      font-size: 1.2em;
+    }
+
+    .resultado {
+      text-align: center;
+      padding: 1rem;
+      color: #ffff;
+      max-width: 400px;
+      margin: 0 auto;
+      border-radius: 10px;
+    }
+
+    .correcto {
+      background-color: rgb(2, 173, 2);
+    }
+
+    .error {
+      background-color: red;
+    }
 
     /** fin de los estilos propios **/
     /* ==========================================================================
