@@ -36,6 +36,8 @@
     let parking = document.getElementById('parking');
     let desayuno = document.getElementById('desayuno');
 
+    botonRegistro.disabled = true;
+
     if (document.getElementById('calcular')) {
 
 
@@ -112,6 +114,9 @@
 
         suma.innerHTML = '€ ' + totalPagar.toFixed(2);
 
+        botonRegistro.disabled = false;
+        document.getElementById('total_pedido').value = totalPagar;
+
       }
 
       function mostrarReservas() {
@@ -146,6 +151,12 @@
 })();
 
 $(function () {
+
+  // agregar clase a menú
+
+  $('body.habitaciones .navegacion-principal a:contains("Habitaciones")').addClass('activo');
+  $('body.planning .navegacion-principal a:contains("Planning")').addClass('activo');
+  $('body.consignas .navegacion-principal a:contains("Consignas")').addClass('activo');
 
   let windowHeight = $(window).height();
   let barraAltura = $('.barra').innerHeight();
@@ -209,5 +220,12 @@ $(function () {
   $('.resumen-evento li:nth-child(4) p').animateNumber({
     number: 9
   }, 1200);
+
+  // colorbox
+
+  $('.colaborador-info').colorbox({
+    inline: true,
+    width: "50%"
+  });
 
 });
